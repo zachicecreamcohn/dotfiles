@@ -1,0 +1,24 @@
+0000000000000000000000000000000000000000 731e644316ef9b6c1e23a5c23bac68307ab10b1b Zach Cohn <zcohn@wustl.edu> 1727807674 -0500	commit (initial): first commit
+731e644316ef9b6c1e23a5c23bac68307ab10b1b 731e644316ef9b6c1e23a5c23bac68307ab10b1b Zach Cohn <zcohn@wustl.edu> 1727807736 -0500	Branch: renamed refs/heads/main to refs/heads/main
+731e644316ef9b6c1e23a5c23bac68307ab10b1b 8bc9661bbbf4cb36742ae28009f75418af4b9bd5 Zach Cohn <zcohn@wustl.edu> 1727808460 -0500	commit: added readme
+8bc9661bbbf4cb36742ae28009f75418af4b9bd5 4b5bc297b838013e23bd1d0e02e84fc2be565504 Zach Cohn <zcohn@wustl.edu> 1728321009 -0500	commit: added fzf to telescope
+4b5bc297b838013e23bd1d0e02e84fc2be565504 4bec02817b91c55899df1a4c5f89418ed968962f Zach Cohn <zcohn@wustl.edu> 1728873552 -0500	commit: updated config
+4bec02817b91c55899df1a4c5f89418ed968962f de158ba683eb34a2b6c30c06e7e62e2b5a9361bc Zach Cohn <zcohn@wustl.edu> 1731048936 -0600	commit: updated
+de158ba683eb34a2b6c30c06e7e62e2b5a9361bc b61a10daca39f6e2ac2aab0728ba8b46f9a121b7 Zach Cohn <zcohn@wustl.edu> 1737252365 -0600	commit: updated
+b61a10daca39f6e2ac2aab0728ba8b46f9a121b7 9d268ebac3cb8fa67d0a828abc65c2352fdce142 Zach Cohn <zcohn@wustl.edu> 1737252379 -0600	commit: ignored env
+9d268ebac3cb8fa67d0a828abc65c2352fdce142 a7f6e58a81a64d9688362cff94ad3663c7a224c7 Zach Cohn <zcohn@wustl.edu> 1737353501 -0600	commit: cleaned up
+a7f6e58a81a64d9688362cff94ad3663c7a224c7 2798e9366d3de320d12c2c280d5de802f7e4cfb9 Zach Cohn <zcohn@wustl.edu> 1737424436 -0600	commit: migrated to snacks provided lazygit
+2798e9366d3de320d12c2c280d5de802f7e4cfb9 9833ac679dd344158ac962723472724e500a6234 Zach Cohn <zcohn@wustl.edu> 1738028036 -0600	commit: cleaned up unnecessary plugins
+9833ac679dd344158ac962723472724e500a6234 b14d0c3d8aaf3792b476d09cdd579178bf0ea738 Zach Cohn <zcohn@wustl.edu> 1738028061 -0600	commit: removed auto-gened readme
+b14d0c3d8aaf3792b476d09cdd579178bf0ea738 ac911e698101c0f0969c5bf359f3649a611d8139 Zach Cohn <zcohn@wustl.edu> 1738092189 -0600	commit: reorganized colorscheme
+ac911e698101c0f0969c5bf359f3649a611d8139 7686a5f801840dc5628f3c07f100cdf91e86014a Zach Cohn <zcohn@wustl.edu> 1738094212 -0600	commit: switched to oil
+7686a5f801840dc5628f3c07f100cdf91e86014a 5a34cf67cc7276b3cf7d3082bc2869df49f400f6 Zach Cohn <zcohn@wustl.edu> 1738094301 -0600	commit: remove opacity
+5a34cf67cc7276b3cf7d3082bc2869df49f400f6 fd8cddc3c7d3d95185b4e6af800160cddc44579b Zach Cohn <zcohn@wustl.edu> 1738094738 -0600	commit: added detail view command for oil
+fd8cddc3c7d3d95185b4e6af800160cddc44579b acd9187582ccd20e110376ac6993d8415b9e2762 Zach Cohn <zcohn@wustl.edu> 1738391921 -0600	commit: transparency and autopair
+acd9187582ccd20e110376ac6993d8415b9e2762 d9c9937a80333ccce7e27765751b4c054f3ff084 Zach Cohn <zcohn@wustl.edu> 1738455256 -0600	commit: added custom eos command cmp source
+d9c9937a80333ccce7e27765751b4c054f3ff084 7fb6e257e8014540e58cbf34589a8413bb8df06d Zach Cohn <zcohn@wustl.edu> 1739853947 -0600	commit: added LSP features
+7fb6e257e8014540e58cbf34589a8413bb8df06d fbb980b6c98c2c85681b3684a2a62910b029ca69 Zach Cohn <zcohn@wustl.edu> 1739853954 -0600	commit: added EOS[32;2ucmp source
+fbb980b6c98c2c85681b3684a2a62910b029ca69 25f58ba778bfda7c1f9473927db89896dc1cc29b Zach Cohn <zcohn@wustl.edu> 1739854775 -0600	commit: add keymap for todo telescope finder
+25f58ba778bfda7c1f9473927db89896dc1cc29b 32cc52f41a52b61ee37dfb7b92967e6a0d4f71c1 Zach Cohn <zcohn@wustl.edu> 1739949750 -0600	commit: added keymap descriptions and two qol mappings
+32cc52f41a52b61ee37dfb7b92967e6a0d4f71c1 f945434faf07d6492f3554bf7d4b0e831f788651 Zach Cohn <zcohn@wustl.edu> 1740893600 -0600	commit: added formatting and git blame updates
+f945434faf07d6492f3554bf7d4b0e831f788651 8317759cd0e0c0e506a8e4e0ea2849d1ffa42a33 Zach Cohn <zcohn@wustl.edu> 1744147619 -0500	commit: updated

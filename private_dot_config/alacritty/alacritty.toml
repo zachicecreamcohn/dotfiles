@@ -1,0 +1,31 @@
+[keyboard]
+bindings = [
+# { key= "H", mods= "Super", chars= "\u001bfh" },
+# { key= "J", mods= "Super", chars= "\u001bfj" },
+# { key= "K", mods= "Super", chars= "\u001bfk" },
+# { key= "L", mods= "Super", chars= "\u001bfl" },
+# { key= "T", mods= "Super", chars= "\u001bftn"},
+# { key= "W", mods= "Super", chars= "\u001bfw" },
+# { key= "]", mods= "Super", chars= "\u001bftt"},
+# { key= "[", mods= "Super", chars= "\u001bftp"},
+# { key= "Enter", mods="Super", chars="\u001bff" },
+# { key= "R", mods= "Super", chars= "\u001b[99~" },
+# { key= "E", mods= "Super", chars= "\u001b0P"} # F1
+
+# { key="H", mods="Command", chars="\u001bph" },
+# { key="J", mods="Command", chars="\u001bpj" },
+# { key="K", mods="Command", chars="\u001bpk" },
+# { key="L", mods="Command", chars="\u001bpl" },
+
+]
+
+
+[window]
+option_as_alt = "both"
+decorations_theme_variant="Dark"
+
+[font.normal]
+family = "Hack Nerd Font"
+
+[font]
+size = 13.0
