@@ -26,3 +26,8 @@ vim.cmd("command! NvimConfig :cd ~/.config/nvim | e ./")
 vim.api.nvim_set_keymap("n", "<Esc>", ":noh<CR>", { noremap = true, silent = true })
 
 vim.g.python3_host_prog = "/usr/bin/python3"
+
+-- Make nvim use underline instead of highlight for a selected line
+vim.defer_fn(function()
+	vim.api.nvim_set_hl(0, "CursorLine", { underline = true })
+end, 0)
