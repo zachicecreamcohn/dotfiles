@@ -8,9 +8,6 @@ vim.fn.setenv("CXXFLAGS", "-isysroot " .. vim.fn.getenv("SDKROOT"))
 
 vim.g.mapleader = " "
 
--- Automatically change the current working directory to the file being edited
-vim.cmd([[autocmd BufEnter * silent! lcd %:p:h]])
-
 -- enable cursorline
 vim.o.cursorline = true
 
@@ -27,7 +24,12 @@ vim.api.nvim_set_keymap("n", "<Esc>", ":noh<CR>", { noremap = true, silent = tru
 
 vim.g.python3_host_prog = "/usr/bin/python3"
 
--- Make nvim use underline instead of highlight for a selected line
-vim.defer_fn(function()
-	vim.api.nvim_set_hl(0, "CursorLine", { underline = true })
-end, 0)
+-- configs available at https://github.com/ruicsh/nvim-config/tree/main/lsp
+vim.lsp.enable({
+	"ast_grep",
+	"lua_ls",
+	"pyright",
+	"ts_ls",
+	"html",
+	"marksman",
+})

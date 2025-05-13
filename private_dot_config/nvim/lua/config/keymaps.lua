@@ -45,12 +45,28 @@ vim.keymap.set(
 -- jump back to previous buffer
 vim.api.nvim_set_keymap("n", "gp", "<C-^>", { noremap = true, silent = true, desc = "Go to previous buffer" })
 
-vim.api.nvim_set_keymap(
-	"n",
-	"g.",
-	":e ./<CR>",
-	{ noremap = true, silent = false, desc = "Open file browser in current dir" }
-)
+-- this is more slightly more complicated than simply opening the file browser in the current directory (pwd) because I have turned off autochdir
+-- but I want to preserve the ux of being able to open oil right where I am in the file tree
+vim.keymap.set("n", "g.", function()
+	local current_file = vim.fn.expand("%:p")
+	local current_dir = vim.fn.fnamemodify(current_file, ":h")
+	vim.cmd("e " .. current_dir)
+end, { noremap = true, desc = "Open file browser in current file's dir" })
 
 -- use lsp for gf
 vim.keymap.set("n", "gf", vim.lsp.buf.definition, { noremap = true, silent = true })
+
+-- “import unresolved symbol under cursor”
+vim.keymap.set("n", "<leader>ii", function()
+	vim.lsp.buf.code_action({
+		apply = true,
+		filter = function(a)
+			return a.kind == "quickfix"
+		end,
+	})
+end, { desc = "LSP add-import quick-fix" })
+
+vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]]) -- make the window biger vertically
+vim.keymap.set("n", "-", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
+vim.keymap.set("n", "+", [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
+vim.keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]]) -- make the window smaller horizontally by pressing shift and -

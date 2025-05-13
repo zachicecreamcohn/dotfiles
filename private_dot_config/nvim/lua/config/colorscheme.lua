@@ -1,1 +1,1 @@
-vim.cmd("colorscheme bathory")
+vim.cmd("colorscheme vague")
