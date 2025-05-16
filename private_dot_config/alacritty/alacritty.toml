@@ -1,25 +1,3 @@
-[keyboard]
-bindings = [
-# { key= "H", mods= "Super", chars= "\u001bfh" },
-# { key= "J", mods= "Super", chars= "\u001bfj" },
-# { key= "K", mods= "Super", chars= "\u001bfk" },
-# { key= "L", mods= "Super", chars= "\u001bfl" },
-# { key= "T", mods= "Super", chars= "\u001bftn"},
-# { key= "W", mods= "Super", chars= "\u001bfw" },
-# { key= "]", mods= "Super", chars= "\u001bftt"},
-# { key= "[", mods= "Super", chars= "\u001bftp"},
-# { key= "Enter", mods="Super", chars="\u001bff" },
-# { key= "R", mods= "Super", chars= "\u001b[99~" },
-# { key= "E", mods= "Super", chars= "\u001b0P"} # F1
-
-# { key="H", mods="Command", chars="\u001bph" },
-# { key="J", mods="Command", chars="\u001bpj" },
-# { key="K", mods="Command", chars="\u001bpk" },
-# { key="L", mods="Command", chars="\u001bpl" },
-
-]
-
-
 [window]
 option_as_alt = "both"
 decorations_theme_variant="Dark"
@@ -28,4 +6,39 @@ decorations_theme_variant="Dark"
 family = "Hack Nerd Font"
 
 [font]
-size = 13.0
+size = 17.0
+[colors.primary]
+background = "#141415"
+foreground = "#cdcdcd"
+
+[colors.cursor]
+text = "#141415"
+cursor = "#cdcdcd"
+
+[colors.normal]
+black = "#141415"
+red = "#d8647e"
+green = "#7fa563"
+yellow = "#e0a363"
+blue = "#6e94b2"
+magenta = "#bb9dbd"
+cyan = "#9bb4bc"
+white = "#cdcdcd"
+
+[colors.bright]
+black = "#606079"
+red = "#c48282"
+green = "#b4d4cf"
+yellow = "#f3be7c"
+blue = "#7e98e8"
+magenta = "#aeaed1"
+cyan = "#90a0b5"
+white = "#c3c3d5"
+
+[colors.search.matches]
+foreground = "#141415"
+background = "#405065"
+
+[colors.selection]
+background = "#333738"
+foreground = "#cdcdcd"
