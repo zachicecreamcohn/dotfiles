@@ -24,3 +24,5 @@ fbb980b6c98c2c85681b3684a2a62910b029ca69 25f58ba778bfda7c1f9473927db89896dc1cc29
 32cc52f41a52b61ee37dfb7b92967e6a0d4f71c1 f945434faf07d6492f3554bf7d4b0e831f788651 Zach Cohn <zcohn@wustl.edu> 1740893600 -0600	commit: added formatting and git blame updates
 f945434faf07d6492f3554bf7d4b0e831f788651 f945434faf07d6492f3554bf7d4b0e831f788651 Zach Cohn <zcohn@wustl.edu> 1743199769 -0500	reset: moving to HEAD
 f945434faf07d6492f3554bf7d4b0e831f788651 8317759cd0e0c0e506a8e4e0ea2849d1ffa42a33 Zach Cohn <zcohn@wustl.edu> 1744147619 -0500	commit: updated
+8317759cd0e0c0e506a8e4e0ea2849d1ffa42a33 e713b712faf92c503b78028cad6e95fdbd77d4bc Zach Cohn <zcohn@wustl.edu> 1745350266 -0500	commit: removed env
+e713b712faf92c503b78028cad6e95fdbd77d4bc 9e9edaf5b60291546926d40aed8f79c939cf8b76 Zach Cohn <zcohn@wustl.edu> 1745475871 -0500	commit: removed grapple. Using marks now

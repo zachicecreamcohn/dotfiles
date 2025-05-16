@@ -24,12 +24,5 @@ vim.api.nvim_set_keymap("n", "<Esc>", ":noh<CR>", { noremap = true, silent = tru
 
 vim.g.python3_host_prog = "/usr/bin/python3"
 
--- configs available at https://github.com/ruicsh/nvim-config/tree/main/lsp
-vim.lsp.enable({
-	"ast_grep",
-	"lua_ls",
-	"pyright",
-	"ts_ls",
-	"html",
-	"marksman",
-})
+-- enable inlay hints
+vim.lsp.inlay_hint.enable()

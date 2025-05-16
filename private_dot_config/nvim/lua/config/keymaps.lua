@@ -66,6 +66,12 @@ vim.keymap.set("n", "<leader>ii", function()
 	})
 end, { desc = "LSP add-import quick-fix" })
 
+vim.keymap.set("n", "<leader>a", function()
+	vim.lsp.buf.code_action({
+		apply = true,
+	})
+end, { desc = "LSP code action" })
+
 vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]]) -- make the window biger vertically
 vim.keymap.set("n", "-", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
 vim.keymap.set("n", "+", [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
