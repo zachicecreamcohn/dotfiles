@@ -1,5 +1,6 @@
 vim.opt.laststatus = 0
 vim.opt.showtabline = 0
+vim.opt.cmdheight = 0
 
 function _G.update_tmux_pwd()
 	local pwd = vim.fn.getcwd()
