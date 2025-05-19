@@ -1,13 +1,18 @@
 return {
 	"folke/snacks.nvim",
+	priority = 1000,
 	lazy = false,
 	---@type snacks.Config
 	opts = {
 		picker = {},
-		lazygit = {
-			enable = true,
-		},
+		lazygit = {},
 		input = {},
+		notifier = {
+			top_down = false,
+			width = { min = 40, max = 70 },
+		},
+		scope = {},
+		toggle = {},
 	},
 	keys = {
 		{
