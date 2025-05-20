@@ -1,6 +1,7 @@
 vim.opt.laststatus = 0
 vim.opt.showtabline = 0
 vim.opt.cmdheight = 0
+vim.opt.showcmd = true
 
 function _G.update_tmux_pwd()
 	local pwd = vim.fn.getcwd():gsub("'", "'\\''")
@@ -20,4 +21,14 @@ vim.api.nvim_create_autocmd("RecordingLeave", {
 	end,
 })
 
-vim.opt.showcmd = true
+local function prompt_mark()
+	vim.ui.input({ prompt = "set mark → ", cancelreturn = "__CANCEL__" }, function(mark)
+		if not mark or #mark == 0 or mark == "__CANCEL__" then
+			return
+		end
+		local m = mark:sub(1, 1)
+		vim.cmd.normal({ "m" .. m, bang = true })
+	end)
+end
+
+vim.keymap.set("n", "m", prompt_mark, { noremap = true, silent = true })

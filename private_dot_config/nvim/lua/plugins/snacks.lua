@@ -2,7 +2,9 @@ return {
 	"folke/snacks.nvim",
 	priority = 1000,
 	lazy = false,
-	---@type snacks.Config
+	init = function()
+		_G.Snacks = require("snacks")
+	end,
 	opts = {
 		picker = {},
 		lazygit = {},
@@ -13,6 +15,18 @@ return {
 		},
 		scope = {},
 		toggle = {},
+		animate = {},
+		scroll = {
+			animate = {
+				duration = { step = 7.5, total = 125 },
+				easing = "linear",
+			},
+			animate_repeat = {
+				delay = 100,
+				duration = { step = 2.5, total = 25 },
+				easing = "linear",
+			},
+		},
 	},
 	keys = {
 		{
