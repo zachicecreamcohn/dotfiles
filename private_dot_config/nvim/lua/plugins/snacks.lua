@@ -18,7 +18,7 @@ return {
 		animate = {},
 		scroll = {
 			animate = {
-				duration = { step = 7.5, total = 125 },
+				duration = { step = 5.625, total = 93.75 },
 				easing = "linear",
 			},
 			animate_repeat = {

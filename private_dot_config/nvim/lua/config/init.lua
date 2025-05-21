@@ -26,3 +26,9 @@ vim.g.python3_host_prog = "/usr/bin/python3"
 
 -- enable inlay hints
 vim.lsp.inlay_hint.enable()
+
+vim.o.foldmethod = "indent"
+vim.o.foldlevelstart = 99
+
+-- start with copilot disabled
+vim.cmd(":Copilot disable")
