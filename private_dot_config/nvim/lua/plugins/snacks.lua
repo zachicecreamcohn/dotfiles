@@ -7,7 +7,14 @@ return {
 	end,
 	opts = {
 		picker = {},
-		lazygit = {},
+		lazygit = {
+			configure = true,
+			config = {
+				gui = {
+					backdrop = 100,
+				},
+			},
+		},
 		input = {},
 		-- notifier = {
 		-- 	top_down = false,

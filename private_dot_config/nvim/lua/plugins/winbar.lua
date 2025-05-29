@@ -3,9 +3,9 @@ return {
 	event = "VimEnter", -- Alternatively, BufReadPre if we don't care about the empty file when starting with 'nvim'
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
+		vim.api.nvim_set_hl(0, "WinBar", { fg = "#FFFFFF", bg = "none" })
+		vim.api.nvim_set_hl(0, "WinBarNC", { fg = "#606079", bg = "none" })
 		require("winbar").setup({
-			-- your configuration comes here, for example:
-			background_color = "#0c0c0d",
 			icons = true,
 			diagnostics = true,
 			buf_modified = true,
