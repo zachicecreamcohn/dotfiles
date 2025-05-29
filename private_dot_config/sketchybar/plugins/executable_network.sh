@@ -19,12 +19,12 @@ if [ "$TYPE" = "down" ]; then
         FORMATTED="${SPEED}B"
     fi
 
-    # Update with green color
+    # Update with palette 4 color
     sketchybar --set "$NAME" \
         icon="↓" \
-        icon.color=0xff5dd85f \
+        icon.color=0xff6e94b2 \
         label="$FORMATTED" \
-        label.color=0xff5dd85f \
+        label.color=0xff6e94b2 \
         prev_value="$CURRENT_VALUE"
 
 elif [ "$TYPE" = "up" ]; then
@@ -42,11 +42,11 @@ elif [ "$TYPE" = "up" ]; then
         FORMATTED="${SPEED}B"
     fi
 
-    # Update with orange color
+    # Update with palette 5 color
     sketchybar --set "$NAME" \
         icon="↑" \
-        icon.color=0xfff5835d \
+        icon.color=0xffbb9dbd \
         label="$FORMATTED" \
-        label.color=0xfff5835d \
+        label.color=0xffbb9dbd \
         prev_value="$CURRENT_VALUE"
 fi
