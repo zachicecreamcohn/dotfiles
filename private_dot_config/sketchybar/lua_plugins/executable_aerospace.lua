@@ -1,0 +1,18 @@
+-- -- Aerospace plugin for SketchyBar
+-- -- This script is called directly by sketchybar
+--
+-- -- Get current environment variables
+-- local name = os.getenv("NAME")
+-- local sid = name:gsub("space%.", "")
+--
+-- -- Get the focused workspace from aerospace
+-- local handle = io.popen("aerospace list-workspaces --focused")
+-- local focused_workspace = handle:read("*a"):gsub("%s+", "")
+-- handle:close()
+--
+-- -- Update space item background based on focus
+-- if sid == focused_workspace then
+-- 	os.execute('sketchybar --set "$NAME" background.drawing=on')
+-- else
+-- 	os.execute('sketchybar --set "$NAME" background.drawing=off')
+-- end
