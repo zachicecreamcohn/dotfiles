@@ -1,14 +1,19 @@
 [window]
 option_as_alt = "both"
 decorations_theme_variant="Dark"
+title = ""
+dynamic_title=false
+decorations="Buttonless"
+padding = { x = 20, y = 20 }
 
 [font.normal]
-family = "Hack Nerd Font"
+family="JetBrainsMono Nerd Font Propo"
 
 [font]
 size = 17.0
+
 [colors.primary]
-background = "#141415"
+background="#0c0c0d"
 foreground = "#cdcdcd"
 
 [colors.cursor]

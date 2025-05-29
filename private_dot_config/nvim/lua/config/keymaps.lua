@@ -76,3 +76,47 @@ vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]]) -- make the window big
 vim.keymap.set("n", "-", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
 vim.keymap.set("n", "+", [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
 vim.keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]]) -- make the window smaller horizontally by pressing shift and -
+
+-- toggle inlay hints
+vim.keymap.set("n", "<leader>ht", function()
+	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end, {
+	noremap = true,
+	silent = true,
+	desc = "Toggle inlay hints everywhere",
+})
+
+local function toggle_line_ending(char, pattern)
+	local cursor_pos = vim.api.nvim_win_get_cursor(0)
+	local line = vim.api.nvim_get_current_line()
+	if line:match(pattern) then
+		vim.api.nvim_set_current_line(line:sub(1, -2))
+	else
+		vim.api.nvim_set_current_line(line .. char)
+	end
+	vim.api.nvim_win_set_cursor(0, cursor_pos)
+end
+
+vim.keymap.set("n", "<leader>t,", function()
+	toggle_line_ending(",", ",$")
+end, {
+	noremap = true,
+	silent = true,
+	desc = "Toggle comma at end of line",
+})
+
+vim.keymap.set("n", "<leader>t;", function()
+	toggle_line_ending(";", ";$")
+end, {
+	noremap = true,
+	silent = true,
+	desc = "Toggle semicolon at end of line",
+})
+
+vim.keymap.set("n", "<leader>t.", function()
+	toggle_line_ending(".", "%.$")
+end, {
+	noremap = true,
+	silent = true,
+	desc = "Toggle period at end of line",
+})

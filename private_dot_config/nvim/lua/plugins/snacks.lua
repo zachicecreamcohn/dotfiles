@@ -9,10 +9,10 @@ return {
 		picker = {},
 		lazygit = {},
 		input = {},
-		notifier = {
-			top_down = false,
-			width = { min = 40, max = 70 },
-		},
+		-- notifier = {
+		-- 	top_down = false,
+		-- 	width = { min = 40, max = 70 },
+		-- },
 		scope = {},
 		toggle = {},
 		animate = {},
@@ -174,6 +174,13 @@ return {
 			desc = "Diagnostics",
 		},
 		{
+			"<leader>sbd",
+			function()
+				Snacks.picker.diagnostics()
+			end,
+			desc = "Diagnostics",
+		},
+		{
 			"<leader>sh",
 			function()
 				Snacks.picker.help()
@@ -287,6 +294,7 @@ return {
 			end,
 			desc = "LSP Symbols",
 		},
+
 		-- Lazygit (<leader>lg)
 		{
 			"<leader>lg",

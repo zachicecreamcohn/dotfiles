@@ -36,6 +36,8 @@ return {
 	on_attach = function(client, bufnr)
 		if client.server_capabilities.inlayHintProvider then
 			vim.lsp.inlay_hint(bufnr, true)
+
+			-- Add keybinding to toggle inlay hints
 		end
 	end,
 	single_file_support = true,
