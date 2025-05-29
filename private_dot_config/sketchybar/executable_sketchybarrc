@@ -83,6 +83,10 @@ sketchybar --add item clock right \
            --add item volume right \
            --set volume script="$PLUGIN_DIR/volume.sh" \
            --subscribe volume volume_change \
+           --add item network.up right \
+           --set network.up update_freq=1 script="$PLUGIN_DIR/network.sh" \
+           --add item network.down right \
+           --set network.down update_freq=1 script="$PLUGIN_DIR/network.sh" \
            --add item battery right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change
