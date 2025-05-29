@@ -2,13 +2,12 @@
 
 # This is a sketchybarrc file that uses Lua scripts instead of Bash scripts
 
-PLUGIN_DIR="$CONFIG_DIR/lua_plugins"
-BASH_PLUGIN_DIR="$CONFIG_DIR/plugins" # necessary for performance (example from demo, ensure this path is correct if you use it)
+LUA_PLUGIN_DIR="$CONFIG_DIR/lua_plugins"
+BASH_PLUGIN_DIR="$CONFIG_DIR/bash_plugins" # necessary for performance (example from demo, ensure this path is correct if you use it)
+ITEM_DIR="$CONFIG_DIR/items"
 
-##### Bar Appearance #####
 sketchybar --bar position=top height=40 blur_radius=30 color=0x40000000
 
-##### Changing Defaults #####
 default=(
   padding_left=5
   padding_right=5
@@ -23,56 +22,8 @@ default=(
 )
 sketchybar --default "${default[@]}"
 
-##### Adding Mission Control Space Indicators #####
-SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10") # Ensure you have aerospace installed and configured if using this.
-sketchybar --add event aerospace_workspace_change
-
-# Check if aerospace command exists before trying to use it
-if command -v aerospace &> /dev/null; then
-  for sid in $(aerospace list-workspaces --all); do
-    # Use icons from SPACE_ICONS array if available, otherwise use the sid as fallback
-    icon_index=$((sid - 1))
-    if [ $icon_index -lt ${#SPACE_ICONS[@]} ] && [ $icon_index -ge 0 ]; then
-        space_icon="${SPACE_ICONS[$icon_index]}"
-    else
-        space_icon="$sid"
-    fi
-
-
-
-    sketchybar --add item space.$sid left \
-      --subscribe space.$sid aerospace_workspace_change \
-      --set space.$sid \
-      background.color=0x40ffffff \
-      background.corner_radius=5 \
-      background.height=25 \
-      background.drawing=off \
-      icon="$space_icon" \
-      icon.padding_left=7 \
-      icon.padding_right=7 \
-      label.drawing=off \
-      click_script="aerospace workspace $sid" \
-      script="$BASH_PLUGIN_DIR/aerospace.sh $sid" # Ensure aerospace.sh exists at this path and is executable
-  done
-else
-  echo "SketchyBar: aerospace command not found. Skipping space indicators." >&2
-fi
-
-sketchybar --add item chevron left \
-           --set chevron icon= label.drawing=off \
-           --add item front_app left \
-           --set front_app icon.drawing=off script="$BASH_PLUGIN_DIR/front_app.sh" \
-           --subscribe front_app front_app_switched
-
-##### Adding Right Items #####
-sketchybar --add item clock right \
-           --set clock update_freq=10 icon=  script="lua $PLUGIN_DIR/clock.lua" \
-           --add item volume right \
-           --set volume script="lua $PLUGIN_DIR/volume.lua" \
-           --subscribe volume volume_change \
-           --add item battery right \
-           --set battery update_freq=120 script="lua $PLUGIN_DIR/battery.lua" \
-           --subscribe battery system_woke power_source_change
-
+source "$ITEM_DIR/aerospace.sh"
+source "$ITEM_DIR/front_app.sh"
+source "$ITEM_DIR/right_items.sh"
 ##### Force all scripts to run the first time #####
 sketchybar --update

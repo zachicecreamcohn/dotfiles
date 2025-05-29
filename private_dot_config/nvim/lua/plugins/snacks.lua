@@ -16,10 +16,10 @@ return {
 			},
 		},
 		input = {},
-		-- notifier = {
-		-- 	top_down = false,
-		-- 	width = { min = 40, max = 70 },
-		-- },
+		notifier = {
+			top_down = false,
+			width = { min = 40, max = 70 },
+		},
 		scope = {},
 		toggle = {},
 		animate = {},
