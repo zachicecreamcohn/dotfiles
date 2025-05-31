@@ -1,6 +1,6 @@
 return {
 	"Ramilito/winbar.nvim",
-	event = "VimEnter", -- Alternatively, BufReadPre if we don't care about the empty file when starting with 'nvim'
+	event = "BufReadPre",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		vim.api.nvim_set_hl(0, "WinBar", { fg = "#FFFFFF", bg = "none" })

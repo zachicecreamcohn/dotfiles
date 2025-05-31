@@ -54,8 +54,8 @@ return {
 					provider = "ollama",
 				},
 				{
-					name = "qwen3 8b",
-					model = "qwen3:8b",
+					name = "deepseek-r1:8b",
+					model = "okamototk/deepseek-r1:8b",
 					provider = "ollama",
 				},
 				{
@@ -69,7 +69,6 @@ return {
 					provider = "ollama",
 				},
 			},
-			hideThinking = true,
 		})
 	end,
 }

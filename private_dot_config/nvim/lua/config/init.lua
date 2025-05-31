@@ -6,8 +6,6 @@ vim.fn.setenv("SDKROOT", vim.fn.systemlist("xcrun --show-sdk-path")[1])
 vim.fn.setenv("CFLAGS", "-isysroot " .. vim.fn.getenv("SDKROOT"))
 vim.fn.setenv("CXXFLAGS", "-isysroot " .. vim.fn.getenv("SDKROOT"))
 
-vim.g.mapleader = " "
-
 -- enable cursorline
 vim.o.cursorline = true
 
@@ -24,9 +22,6 @@ vim.api.nvim_set_keymap("n", "<Esc>", ":noh<CR>", { noremap = true, silent = tru
 
 vim.g.python3_host_prog = "/usr/bin/python3"
 
--- enable inlay hints
-vim.lsp.inlay_hint.enable()
-
 vim.o.foldmethod = "indent"
 vim.o.foldlevelstart = 99
 
@@ -42,3 +37,7 @@ vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
 -- make snacks picker titles transparent, too
 vim.api.nvim_set_hl(0, "SnacksPickerTitle", { bg = "none", fg = "#cdcdcd", bold = true })
 vim.api.nvim_set_hl(0, "SnacksPickerBoxTitle", { bg = "none", fg = "#cdcdcd", bold = true })
+vim.api.nvim_set_hl(0, "FloatTitle", { fg = "#878787" })
+
+-- prevent error with sixel presence
+vim.opt.guicursor = ""

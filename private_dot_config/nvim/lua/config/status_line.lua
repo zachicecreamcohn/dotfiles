@@ -1,34 +1,10 @@
 vim.opt.laststatus = 0
 vim.opt.showtabline = 0
-vim.opt.cmdheight = 0
 vim.opt.showcmd = true
+vim.opt.shortmess = "IFWc"
 
-function _G.update_tmux_pwd()
-	local pwd = vim.fn.getcwd():gsub("'", "'\\''")
-	os.execute("tmux set-environment NVIM_PWD '" .. pwd .. "' && tmux refresh-client -S")
-end
-vim.api.nvim_create_autocmd("DirChanged", { callback = _G.update_tmux_pwd })
-_G.update_tmux_pwd()
-
-vim.api.nvim_create_autocmd("RecordingEnter", {
+vim.api.nvim_create_autocmd("VimEnter", {
 	callback = function()
-		vim.opt.cmdheight = 1
+		vim.opt.ruler = false
 	end,
 })
-vim.api.nvim_create_autocmd("RecordingLeave", {
-	callback = function()
-		vim.opt.cmdheight = 0
-	end,
-})
-
-local function prompt_mark()
-	vim.ui.input({ prompt = "set mark → ", cancelreturn = "__CANCEL__" }, function(mark)
-		if not mark or #mark == 0 or mark == "__CANCEL__" then
-			return
-		end
-		local m = mark:sub(1, 1)
-		vim.cmd.normal({ "m" .. m, bang = true })
-	end)
-end
-
-vim.keymap.set("n", "m", prompt_mark, { noremap = true, silent = true })
