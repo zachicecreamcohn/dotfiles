@@ -1,4 +1,4 @@
-WORKSPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10") # Ensure you have aerospace installed and configured if using this.
+WORKSPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
 sketchybar --add event aerospace_workspace_change
 
 # Check if aerospace command exists before trying to use it
@@ -26,7 +26,7 @@ if command -v aerospace &> /dev/null; then
       icon.padding_right=7 \
       label.drawing=off \
       click_script="aerospace workspace $sid" \
-      script="$BASH_PLUGIN_DIR/aerospace.sh $sid" # Ensure aerospace.sh exists at this path and is executable
+      script="$BASH_PLUGIN_DIR/aerospace.sh $sid"
   done
 else
   echo "SketchyBar: aerospace command not found. Skipping space indicators." >&2

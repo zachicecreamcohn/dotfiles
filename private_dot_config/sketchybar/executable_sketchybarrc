@@ -20,10 +20,42 @@ default=(
   label.padding_left=4
   label.padding_right=4
 )
+
+# Define common group style with white outline
+group_style=(
+  background.color=0x00000000
+  background.border_color=0x60ffffff
+  background.border_width=2
+  background.corner_radius=15
+  background.height=30
+  background.padding_left=0
+  background.padding_right=0
+  padding_left=8
+  padding_right=8
+  drawing=on
+)
+
+# Define group style only for music
+music_group=("${group_style[@]}")
+
 sketchybar --default "${default[@]}"
 
 source "$ITEM_DIR/aerospace.sh"
 source "$ITEM_DIR/front_app.sh"
-source "$ITEM_DIR/right_items.sh"
-##### Force all scripts to run the first time #####
+
+# Add all items first
+source "$ITEM_DIR/clock.sh"
+source "$ITEM_DIR/volume.sh"
+source "$ITEM_DIR/battery.sh"
+sketchybar --add item group_separator_1 right
+source "$ITEM_DIR/music.sh"
+
+# Music is already in a group, no need for additional bracket
+
+# Create brackets to group items with backgrounds
+sketchybar --add bracket music_group music \
+           --set music_group "${music_group[@]}"
+
+sketchybar --set group_separator_1 width=10 drawing=on
+
 sketchybar --update
