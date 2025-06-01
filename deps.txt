@@ -1,0 +1,29 @@
+# Dependencies for chezmoi configuration
+
+## Window Management
+- AeroSpace - Tiling window manager for macOS (https://nikitabobko.github.io/AeroSpace/)
+- borders - Window border manager (https://github.com/FelixKratz/borders)
+
+## Status Bar
+- sketchybar - Status bar for macOS (https://github.com/FelixKratz/SketchyBar)
+
+## Terminal
+- Alacritty - Terminal emulator (https://github.com/alacritty/alacritty)
+- tmux - Terminal multiplexer (https://github.com/tmux/tmux)
+- JetBrainsMono Nerd Font - Font with icons (https://www.nerdfonts.com)
+
+## Shell
+- oh-my-zsh - Zsh configuration framework (https://ohmyz.sh)
+- zsh-nvm - NVM plugin for Zsh
+- ollama - Local LLM runner (referenced in aliases)
+
+## Editor
+- Neovim - Text editor
+
+## Keyboard Customization
+- Karabiner-Elements - Keyboard customizer for macOS (https://karabiner-elements.pqrs.org/)
+- mouseless - Application for custom keyboard shortcuts (net.sonuscape.mouseless)
+
+## tmux Plugins
+- tmux-plugins/tpm - Tmux Plugin Manager
+- christoomey/vim-tmux-navigator - Navigation between tmux and vim
