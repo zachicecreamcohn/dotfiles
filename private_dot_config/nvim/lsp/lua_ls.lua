@@ -7,6 +7,9 @@ return {
 			runtime = {
 				version = "LuaJIT",
 			},
+			diagnostics = {
+				globals = { "vim" },
+			},
 			signatureHelp = { enabled = true },
 			hint = {
 				enable = true,

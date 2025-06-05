@@ -38,6 +38,3 @@ vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
 vim.api.nvim_set_hl(0, "SnacksPickerTitle", { bg = "none", fg = "#cdcdcd", bold = true })
 vim.api.nvim_set_hl(0, "SnacksPickerBoxTitle", { bg = "none", fg = "#cdcdcd", bold = true })
 vim.api.nvim_set_hl(0, "FloatTitle", { fg = "#878787" })
-
--- prevent error with sixel presence
-vim.opt.guicursor = ""

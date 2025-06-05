@@ -36,6 +36,18 @@ return {
 				["gx"] = "actions.open_external",
 				["g."] = "actions.toggle_hidden",
 				["g\\"] = "actions.toggle_trash",
+				["gd"] = {
+					desc = "Toggle file detail view",
+					callback = function()
+						local detail = not rawget(_G, "oil_detail_view")
+						_G.oil_detail_view = detail
+						if detail then
+							require("oil").set_columns({ "icon", "permissions", "size", "mtime" })
+						else
+							require("oil").set_columns({ "icon" })
+						end
+					end,
+				},
 			},
 		})
 	end,

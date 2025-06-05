@@ -39,9 +39,11 @@ return {
 					base_url = "https://api.openai.com/v1",
 				},
 				{
-					name = "fake-model-test",
-					model = "fakemodel",
+					name = "o4-mini",
 					provider = "openai",
+					model = "o1-2024-12-17",
+					api_key_env_var = "OPENAI_API_KEY",
+					base_url = "https://api.openai.com/v1",
 				},
 				{
 					name = "qwen3 14b",
@@ -49,8 +51,13 @@ return {
 					provider = "ollama",
 				},
 				{
-					name = "llama3.2",
-					model = "llama3.2:latest",
+					name = "qwen2.5 7b",
+					model = "qwen2.5:7b",
+					provider = "ollama",
+				},
+				{
+					name = "qwen2.5 72b",
+					model = "qwen2.5:72b",
 					provider = "ollama",
 				},
 				{
